@@ -50,7 +50,7 @@ const Header = () => {
             <li className="text-gray-600 py-2 hover:text-gray-800">
               <Link to="/blog">Blog</Link>
             </li>
-            <li className="bg-black text-white border border-gray-300 px-4 py-2 rounded hover:bg-white hover:text-black">
+            <li className="bg-black text-white border border-gray-300 px-4 py-2 rounded-full hover:bg-white hover:text-black">
               <Link to="/contact">Contact Me</Link>
             </li>
           </ul>

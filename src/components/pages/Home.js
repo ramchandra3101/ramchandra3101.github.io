@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { RESUME_URL } from "../../Assets/Contsants/Constants";
 
 const Home = () => {
   return (
@@ -23,7 +24,13 @@ const Home = () => {
           </Link>{" "}
           or{" "}
           <Link
-            to="/hireme"
+            to={RESUME_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => {
+              e.preventDefault();
+              window.open(RESUME_URL, "_blank", "noopener,noreferrer");
+            }}
             className="text-cyan-600 font-bold hover:text-black"
           >
             Hire me

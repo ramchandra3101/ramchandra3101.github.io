@@ -15,10 +15,43 @@ const About = () => {
           <h3 className="text-gray-600">Software Engineer</h3>
         </div>
       </div>
-      <div className="md:ml-12 py-20 px-20">
-        <p className="text-gray-600 my-4"></p>
-        <p className="text-gray-600 my-4"></p>
+      <div className="container mx-auto px-20 py-20">
+        <div className="prose lg:prose-xl ">
+          <p>
+            At the intersection of code and creativity, you'll find
+            me—Ramachandra Yerramsetti, a Software Engineer.
+          </p>
+
+          <p>
+            By day, I'm immersed in the world of algorithms and data structures,
+            pursuing my Master's in Computer Science at UConn. By night, I'm
+            crafting narratives, translating my love for cinema into screenplays
+            that bridge my technical mind with my creative spirit.
+          </p>
+
+          <p>
+            My journey in tech is driven by the same passion that fuels my
+            admiration for cricket legend Virat Kohli—a relentless pursuit of
+            excellence and the thrill of overcoming challenges. Whether I'm
+            debugging a stubborn piece of code or drafting a plot twist, I bring
+            the same level of dedication and innovative thinking to every
+            project.
+          </p>
+
+          <p>
+            I believe in the power of diverse experiences to fuel innovation. My
+            unique blend of technical expertise and creative endeavors allows me
+            to approach problem-solving from multiple angles, resulting in
+            solutions that are as imaginative as they are effective.
+          </p>
+          <p>
+            In essence, I'm a coder who dreams in binary and writes in plot
+            twists, always ready for the next big challenge—be it in the world
+            of tech, on the pages of a screenplay, or in life itself.
+          </p>
+        </div>
       </div>
+      <div />
     </div>
   );
 };
