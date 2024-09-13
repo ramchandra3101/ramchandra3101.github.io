@@ -1,5 +1,11 @@
 import { Link } from "react-router-dom";
 import { MAPS_URL } from "../Assets/Contsants/Constants";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLinkedin,
+  faTwitter,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
@@ -13,12 +19,39 @@ const Footer = () => {
           <button className="bg-gray-500 text-white font-bold py-3 px-6 rounded-full hover:bg-cyan-600">
             <Link to="/contact">Tell me about your project</Link>
           </button>
+          {/* Social Media Icons */}
+          <div className="flex justify-start py-2 mt-4">
+            <a
+              href="https://www.linkedin.com/in/ramachandra-yerramsetti/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mx-2"
+            >
+              <FontAwesomeIcon icon={faLinkedin} size="2x" />
+            </a>
+            <a
+              href="https://github.com/ramchandra3101"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mx-2"
+            >
+              <FontAwesomeIcon icon={faGithub} size="2x" />
+            </a>
+            <a
+              href="https://x.com/Ramcha_writes"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mx-2"
+            >
+              <FontAwesomeIcon icon={faTwitter} size="2x" />
+            </a>
+          </div>
 
           <p className="text-sm py-10">
             &copy; {currentYear} Ramachandra Yerramsetti. All rights reserved.
           </p>
         </div>
-        <div className="w-1/4">
+        <div className="w-1/4 py-12">
           <div className="mb-6">
             <h2 className="text-xl font-bold">Email</h2>
             <p className="text-gray-600">rcyerramsetti@protonmail.com</p>

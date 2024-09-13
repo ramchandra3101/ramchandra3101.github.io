@@ -1,5 +1,11 @@
 import { Link } from "react-router-dom";
 import { RESUME_URL } from "../../Assets/Contsants/Constants";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLinkedin,
+  faTwitter,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Home = () => {
   return (
@@ -11,8 +17,24 @@ const Home = () => {
         <h2 className="text-3xl md:text-5xl font-semibold text-cyan-600 mb-2">
           I am Ramachandra
         </h2>
-        <h3 className="text-xl md:text-2xl text-gray-700 mb-6">
-          Software Engineer
+        <h3 className=" text-xl md:text-2xl text-gray-700 mb-6 py-4">
+          Software Engineer at{" "}
+          <Link
+            to="https://health.uconn.edu/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-bold"
+            onClick={(e) => {
+              e.preventDefault();
+              window.open(
+                "https://health.uconn.edu/",
+                "_blank",
+                "noopener,noreferrer"
+              );
+            }}
+          >
+            UCONN Health
+          </Link>
         </h3>
         <h2 className="text-lg md:text-xl text-gray-600">
           Know more{" "}
@@ -36,6 +58,32 @@ const Home = () => {
             Hire me
           </Link>
         </h2>
+        <div className="flex justify-start mt-4 py-4">
+          <a
+            href="https://www.linkedin.com/in/ramachandra-yerramsetti/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mx-2"
+          >
+            <FontAwesomeIcon icon={faLinkedin} size="2x" />
+          </a>
+          <a
+            href="https://github.com/ramchandra3101"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mx-2"
+          >
+            <FontAwesomeIcon icon={faGithub} size="2x" />
+          </a>
+          <a
+            href="https://x.com/Ramcha_writes"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mx-2"
+          >
+            <FontAwesomeIcon icon={faTwitter} size="2x" />
+          </a>
+        </div>
       </div>
     </div>
   );
