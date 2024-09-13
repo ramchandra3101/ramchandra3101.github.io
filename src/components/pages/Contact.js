@@ -6,17 +6,12 @@ const Contact = () => {
     email: "",
     message: "",
   });
-  const [message, setMessage] = useState("");
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
-  };
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
   };
 
   return (
@@ -65,10 +60,9 @@ const Contact = () => {
         <div className="text-center">
           <button
             type="submit"
-            disabled={isSubmitting}
             className="bg-cyan-600 text-white py-2 px-4 rounded hover:bg-cyan-700"
           >
-            {isSubmitting ? "Sending..." : "Send Message"}
+            Send Message
           </button>
         </div>
       </form>
