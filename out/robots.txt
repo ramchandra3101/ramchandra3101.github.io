@@ -1,5 +1,0 @@
-User-Agent: *
-Allow: /
-
-Host: https://rcyerramsetti.com
-Sitemap: https://rcyerramsetti.com/sitemap.xml
