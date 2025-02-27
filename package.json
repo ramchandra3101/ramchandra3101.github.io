@@ -1,5 +1,6 @@
 {
-  "name": "tailwind-nextjs-starter-blog",
+  "name": "myportfolio",
+  "homepage": "https://ramchandra3101.github.io",
   "version": "2.3.0",
   "private": true,
   "scripts": {
