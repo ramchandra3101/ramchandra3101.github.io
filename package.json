@@ -8,6 +8,7 @@
     "build": " next build ",
     "serve": "next start",
     "analyze": "next build",
+    "deploy": "gh-pages -d build",
     "lint": "next lint --fix --dir pages --dir app --dir components --dir lib --dir layouts --dir scripts",
     "prepare": "husky"
   },
