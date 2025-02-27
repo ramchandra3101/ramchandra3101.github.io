@@ -33,7 +33,7 @@ jobs:
       - name: Build NextJS site
         run: npm run build
         
-      - name: Upload artifact
+      - name: github-pages
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
