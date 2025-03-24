@@ -32,6 +32,20 @@ const projectsData: Project[] = [
     imgSrc: '/static/images/NFL.jpg',
     href: 'https://github.com/ramchandra3101/NFLoutcomes-prediction'
   },
+  {
+    title: 'Refugee & Immigrant Transitions Surveyor Form',
+    description: `Attended AI for Good Hacakthon at San Francisco, We have developed a Full-stack application to detect data from Handwritten survey Form using Gemini Flash 2.0 and keep them in structured data xlsx format`,
+    imgSrc: '/static/images/RIT_Hackathon.jpeg',
+    href: 'https://github.com/ramchandra3101/RIT_AI_From'
+  },
+  {
+    title: 'LFT Lens',
+    description: `Developed a Native Mobile Application to detect Test and control lines from LFT strips and generate Garphs based on pixel intensity`,
+    imgSrc: '/static/images/COVID-tests.jpg',
+    href: 'https://github.com/ramchandra3101/strip_frontend'
+  },
+
+
 
 ]
 
