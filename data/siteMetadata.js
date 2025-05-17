@@ -7,6 +7,7 @@ const siteMetadata = {
   CurrentCompany: 'UCONN Health',
   Education: 'Graduate Student',
   University: 'UCONN',
+  ResumeURL: 'https://github.com/ramchandra3101/Resume_SDE/blob/main/Ramchandra_SWEII.pdf',
   // headerTitle: 'TailwindBlog',
   language: 'en-us',
   theme: 'system', // system, dark or light
