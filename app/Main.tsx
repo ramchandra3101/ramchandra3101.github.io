@@ -10,8 +10,9 @@ export default function Home() {
   const [isTyping, setIsTyping] = useState(true)
   const [currentIndex, setCurrentIndex] = useState(0)
   const infroArray = [
-    `${siteMetadata.CurrentPosition} at ${siteMetadata.CurrentCompany}`,
-    `${siteMetadata.Education} at ${siteMetadata.University}`
+    `${siteMetadata.University}`,
+    `${siteMetadata.CurrentStatus}`,
+
   ]
 
   useEffect (() => {
