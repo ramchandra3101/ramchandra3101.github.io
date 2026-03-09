@@ -65,24 +65,36 @@ export default function Home() {
             <span className="animate-blink">|</span>
           </p>
           <p className="text-lg font-bold leading-7 text-gray-500 dark:text-white">
-            Know more <Link href="/about" className="link-underline link-underline-black text-black dark:text-white dark:hover:text-gray-300">about me</Link> and <Link href="/projects" className="link-underline link-underline-black text-black dark:text-white dark:hover:text-gray-300">my work</Link> 
+            Know more <Link href="/#about" className="link-underline link-underline-black text-black dark:text-white dark:hover:text-gray-300">about me</Link> and <Link href="/#projects" className="link-underline link-underline-black text-black dark:text-white dark:hover:text-gray-300">my work</Link>
           </p>
 
-          <div className="flex items-center justify-center pt-8">
-      <Link 
-        href= "https://github.com/ramchandra3101/Resume_SDE/blob/main/Ramchandra_SWEII.pdf"
-        className="btn btn-primary bg-black text-white dark:text-black dark:bg-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 transform hover:scale-105 bg-"
-      >
-        View My Resume
-      </Link>
+          <div className="pt-8">
+            <p className="mb-3 text-xl font-semibold tracking-tight text-gray-900 dark:text-gray-100">
+              Here is my Resume
+            </p>
+            <div className="overflow-auto rounded-lg border-2 border-gray-200 bg-gray-100 dark:border-gray-700 dark:bg-gray-800/50">
+              <div className="h-[70vh] min-h-[400px] w-full">
+                <iframe
+                  src="/Ramachandra_Software_Engineer.pdf"
+                  title="Ramachandra Resume"
+                  className="h-full w-full border-0"
+                />
+              </div>
+            </div>
+            <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+              <a
+                href="/Ramachandra_Software_Engineer.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-underline link-underline-black text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400"
+              >
+                Open resume in new tab
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
-        
-
-     
-
-    </div>
-  </div>
   )
 }
       
