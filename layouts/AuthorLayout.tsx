@@ -41,32 +41,24 @@ export default function AuthorLayout({ children, content }: Props) {
                   </div>
                 )}
                 <h3 className="mb-2 text-2xl font-bold text-gray-900 dark:text-white">{name}</h3>
-                
+
                 <div className="mb-1 text-lg font-medium text-gray-700 dark:text-gray-300">
                   {occupation}
                 </div>
-                
-                <div className="mb-6 text-gray-500 dark:text-gray-400">
-                  {company}
-                </div>
-                
+
+                <div className="mb-6 text-gray-500 dark:text-gray-400">{company}</div>
+
                 <div className="flex justify-center space-x-4">
                   {email && <SocialIcon kind="mail" href={`mailto:${email}`} size={6} />}
                   {github && <SocialIcon kind="github" href={github} size={6} />}
                   {linkedin && <SocialIcon kind="linkedin" href={linkedin} size={6} />}
                   {twitter && <SocialIcon kind="x" href={twitter} size={6} />}
-                 
                 </div>
               </div>
             </div>
-            <div>
-            {email && (
-              <EmailRevealbox email={email} />
-            )}
-            </div>
+            <div>{email && <EmailRevealbox email={email} />}</div>
           </div>
-          
-          
+
           {/* Biography Content */}
           <div className="col-span-12 md:col-span-8">
             <div className="rounded-xl bg-white p-6 shadow-md dark:bg-gray-800/50 md:p-8">

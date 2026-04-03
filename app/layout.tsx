@@ -20,26 +20,60 @@ const space_grotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteMetadata.siteUrl),
+
+  // ── Page title & per-page template ───────────────────────────────────────
   title: {
-    default: siteMetadata.title,
-    template: `%s | ${siteMetadata.title}`,
+    default: siteMetadata.pageTitle ?? siteMetadata.title,
+    template: `%s | ${siteMetadata.shortTitle}`,
   },
+
+  // ── Meta description — shown in Google search snippets ───────────────────
   description: siteMetadata.description,
+
+  // ── Keywords ─────────────────────────────────────────────────────────────
+  keywords: siteMetadata.keywords,
+
+  // ── Authorship ───────────────────────────────────────────────────────────
+  authors: [{ name: siteMetadata.author, url: siteMetadata.siteUrl }],
+  creator: siteMetadata.author,
+
+  // ── Open Graph — controls LinkedIn / Slack / iMessage unfurl previews ────
   openGraph: {
-    title: siteMetadata.title,
-    description: siteMetadata.description,
-    url: './',
-    siteName: siteMetadata.title,
-  
-    locale: 'en_US',
     type: 'website',
+    locale: 'en_US',
+    url: siteMetadata.siteUrl,
+    siteName: siteMetadata.shortTitle,
+    title: siteMetadata.pageTitle ?? siteMetadata.title,
+    description: siteMetadata.ogDescription ?? siteMetadata.description,
+    images: [
+      {
+        url: siteMetadata.ogImage,
+        width: 400,
+        height: 400,
+        alt: `${siteMetadata.author} — Full-Stack & AI Engineer`,
+      },
+    ],
   },
+
+  // ── Twitter / X card ─────────────────────────────────────────────────────
+  twitter: {
+    card: 'summary',
+    title: siteMetadata.pageTitle ?? siteMetadata.title,
+    description: siteMetadata.description,
+    site: siteMetadata.twitterHandle,
+    creator: siteMetadata.twitterHandle,
+    images: [siteMetadata.ogImage],
+  },
+
+  // ── Canonical & alternates ───────────────────────────────────────────────
   alternates: {
-    canonical: './',
+    canonical: siteMetadata.siteUrl,
     types: {
       'application/rss+xml': `${siteMetadata.siteUrl}/feed.xml`,
     },
   },
+
+  // ── Crawler directives ───────────────────────────────────────────────────
   robots: {
     index: true,
     follow: true,
@@ -51,7 +85,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -67,19 +100,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
       <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
-      <body className="bg-white pl-[calc(100vw-100%)] text-black antialiased dark:bg-gray-950 dark:text-white flex-auto">
+      <body className="bg-white pl-[calc(100vw-100%)] text-black antialiased dark:bg-gray-950 dark:text-white">
         <ThemeProviders>
           <ScrollToHash />
-          <SectionContainer>
-            <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-              <Header />
-              <main className="flex-grow py-10">{children}</main>
-            </SearchProvider>
-
-
-
-            <Footer />
-          </SectionContainer>
+          <div className="flex min-h-screen flex-col">
+            <div className="mx-auto w-full max-w-5xl px-4 sm:px-6 xl:max-w-7xl xl:px-8">
+              <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
+                <Header />
+              </SearchProvider>
+            </div>
+            <main className="w-full flex-grow">{children}</main>
+            <div className="mx-auto w-full max-w-5xl px-4 sm:px-6 xl:max-w-7xl xl:px-8">
+              <Footer />
+            </div>
+          </div>
         </ThemeProviders>
       </body>
     </html>
